@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Hoppers</title>
+    <link href="GB.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="../images/frog.png" />
+</head>
+<body id="body" onload="goThroughLevel();" onunload="saveCard()">
+    <!--music-->
+    <audio id="music" controls loop>
+        <source src="../audio/music.mp3" type="audio/mpeg" />
+    </audio>
+    <div id="printLoc"> </div>
+    <h1 id="points"></h1>
+    <button id="hint" onclick="hint()"><b>Hint</b></button>
+    <!--lose choice-->
+    <div id="loseChoice">
+        <h2>Do you want to try again or return to home page?</h2>
+        <div id="buttonsChoice">
+            <button onclick="tryAgain()">Try Again</button>
+            <button onclick="backToHomePage()">Return To Home Page</button>
+        </div>
+    </div>
+    <!--win-not enough points-->
+    <div id="notEnough">
+        <img src="../images/winner.gif" />
+        <h2>You completed the level!</h2>
+        <p>You do not have enough points to unlock the next level.</p>
+        <h3>Do you want to repeat the level or return to home page?</h3>
+        <div id="buttonsChoice">
+            <button onclick="repeatLevel()">Repeat Level</button>
+            <button onclick="backToHomePage()">Return To Home Page</button>
+        </div>
+    </div>
+    <!--win-enough points-->
+    <div id="enough">
+        <img src="../images/winner.gif" />
+        <h2>You completed the level!</h2>
+        <p>You have enough points to unlock the next level.</p>
+        <h3>Do you want to go to the next level or return to home page?</h3>
+        <div id="buttonsChoice">
+            <button onclick="nextLevel()">Go To Next Level</button>
+            <button onclick="backToHomePage()">Return To Home Page</button>
+        </div>
+    </div>
+    <!--pond-->
+    <table>
+        <tr>
+            <td id="t0"><div id="0" class="lily_pad" ondrop="drop(event)" ondragover="allowDrop(event)"></div></td>
+            <td></td>
+            <td id="t1"><div id="1" class="lily_pad" ondrop="drop(event)" ondragover="allowDrop(event)"></div></td>
+            <td></td>
+            <td id="t2"><div id="2" class="lily_pad" ondrop="drop(event)" ondragover="allowDrop(event)"></div></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td id="t3"><div id="3" class="lily_pad" ondrop="drop(event)" ondragover="allowDrop(event)"></div></td>
+            <td></td>
+            <td id="t4"><div id="4" class="lily_pad" ondrop="drop(event)" ondragover="allowDrop(event)"></div></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td id="t5"><div id="5" class="lily_pad" ondrop="drop(event)" ondragover="allowDrop(event)"></div></td>
+            <td></td>
+            <td id="t6"><div id="6" class="lily_pad" ondrop="drop(event)" ondragover="allowDrop(event)"></div></td>
+            <td></td>
+            <td id="t7"><div id="7" class="lily_pad" ondrop="drop(event)" ondragover="allowDrop(event)"></div></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td id="t8"><div id="8" class="lily_pad" ondrop="drop(event)" ondragover="allowDrop(event)"></div></td>
+            <td></td>
+            <td id="t9"><div id="9" class="lily_pad" ondrop="drop(event)" ondragover="allowDrop(event)"></div></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td id="t10"><div id="10" class="lily_pad" ondrop="drop(event)" ondragover="allowDrop(event)"></div></td>
+            <td></td>
+            <td id="t11"><div id="11" class="lily_pad" ondrop="drop(event)" ondragover="allowDrop(event)"></div></td>
+            <td></td>
+            <td id="t12"><div id="12" class="lily_pad" ondrop="drop(event)" ondragover="allowDrop(event)"></div></td>
+        </tr>
+    </table>
+    <h1 id="exit" onclick="exit()">Quit</h1>
+    <h1 id="backToHomePage" onclick="backToHomePage()">Home Page</h1>
+    <script src="GB.js"></script>
+    <script src="../HomePage/HomePage.js"></script>
+</body>
+</html>

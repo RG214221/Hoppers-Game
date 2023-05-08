@@ -1,0 +1,193 @@
+﻿body{
+    width: 98vw;
+    height: 97vh;
+    display: flex;
+}
+#logo {
+    height: 60%;
+    position: absolute;
+    left: 10%;
+    top: 30%;
+    z-index: 3;
+}
+
+#thinkfun {
+    height: 20%;
+    z-index: 2;
+    padding: 1%;
+}
+
+#buttons {
+    height: 93%;
+    width: 18%;
+    position: absolute;
+    left: 77%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1%;
+}
+
+    #buttons img {
+        flex-grow: 1;
+        height: 20%;
+        padding: 1%;
+    }
+
+#instructions {
+    background-color: white;
+    width: 43%;
+    height: 90%;
+    border: 6px solid black;
+    padding: 0.5%;
+    margin: 1%;
+    z-index: 4;
+    position: absolute;
+    left: 30%;
+    display: none;
+}
+
+#inst {
+    width: 85%;
+    padding: 0.5%;
+}
+
+#x {
+    width: 9%;
+    height: 9%;
+    position: absolute;
+    left: 87%;
+    padding: 1%;
+}
+
+#startGame, #pickLevel {
+    background-color: white;
+    width: 43%;
+    height: 40%;
+    border: 6px solid black;
+    padding: 0.5%;
+    margin: 1%;
+    z-index: 4;
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    display: none;
+}
+
+    #startGame #x, #pickLevel #x {
+        width: 6%;
+        height: 11%;
+        position: absolute;
+        left: 91%;
+        padding: 1%;
+    }
+
+h1 {
+    font-family: Calibri;
+    padding: 2%;
+}
+
+#startGame #buttonsChoice, #pickLevel #buttonsChoiceLevel {
+    display: flex;
+    margin: auto;
+    width: 60%;
+    height: 30%;
+}
+
+#startGame #buttonsChoice {
+    width: 75%;
+    height: 35%;
+}
+
+button {
+    position: center;
+    font-family: Calibri;
+    margin: 5%;
+    flex-grow: 1;
+    box-shadow: 0px 0px 8px #009900;
+    border: none;
+}
+
+    button:hover {
+        background-color: lightgray;
+    }
+
+#pickLevel #buttonsChoiceLevel button {
+    width: 30%;
+    height: 50%;
+}
+
+#intermediate {
+    opacity: 0.5;
+}
+
+    #intermediate:hover {
+        background-color: rgb(239, 239, 239);
+    }
+
+#expert {
+    opacity: 0.5;
+}
+
+    #expert:hover {
+        background-color: rgb(239, 239, 239);
+    }
+
+#lock0, #lock1, #lock2 {
+    width: 5%;
+    height: 15%;
+    transform: rotate(-20deg);
+    position: absolute;
+    right: 20%;
+    z-index: 2;
+    top: 55%;
+}
+
+#lock0 {
+    display: none;
+}
+
+#lock1 {
+    right: 40%;
+}
+
+#lock2 {
+    right: 22%;
+}
+#p {
+    text-align: center;
+}
+#myPoints {
+    font-family: Calibri;
+    background-color: white;
+    width: 43%;
+    height: 96%;
+    border: 6px solid black;
+    padding-left: 2%;
+    padding-right: 2%;
+    z-index: 4;
+    position: absolute;
+    left: 30%;
+    display: none;
+}
+
+    #myPoints h2 {
+        color: #009900;
+        text-align: center;
+    }
+
+    #myPoints .green {
+        color: #009900;
+    }
+
+    #myPoints .underlineGreen {
+        text-decoration: underline solid #009900 2px;
+    }
+
+    #myPoints #playerPoints {
+        border: solid 2px #009900;
+        box-sizing: border-box;
+        width: 60%;
+        margin: auto;
+        margin-top: 2%;
+    }

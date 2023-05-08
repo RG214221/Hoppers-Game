@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Home Page</title>
+    <link href="HomePage.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="../images/frog.png" />
+</head>
+<body onload="enableLevel(50)">
+    <img id="logo" src="../images/hoppers.jpg" />
+    <img id="thinkfun" src="../images/thinkfun.jpg" />
+    <div id="buttons">
+        <img id="redX" src="../images/redx.jpg" onclick="exitHomePage()" />
+        <img src="../images/lilyInstructions.jpg" onclick="showDiv('instructions')" />
+        <img src="../images/lilyStartGame.jpg" onclick="showDiv('startGame')" />
+        <img src="../images/lilyPoints.jpg" onclick="showDiv('myPoints')" />
+    </div>
+    <div id="instructions">
+        <img id="x" src="../images/redx.jpg" onclick="closeDiv('instructions')">
+        <img id="inst" src="../images/instructions.jpg" />
+    </div>
+    <div id="startGame">
+        <img id="x" src="../images/redx.jpg" onclick="closeDiv('startGame')">
+        <h1>Do you want to start a new game or continue where you left off?</h1>
+        <div id="buttonsChoice">
+            <button onclick="continueOldGame()">Continue Playing</button>
+            <button onclick="showDiv('pickLevel')">Start New Game</button>
+            <button onclick="reset()">New Player? Reset!</button>
+        </div>
+    </div>
+    <div id="pickLevel">
+        <img id="x" src="../images/redx.jpg" onclick="closeDiv('pickLevel')">
+        <h1>Which level do you want to play?</h1>
+        <br />
+        <div id="buttonsChoiceLevel">
+            <button id="begginer" onclick="updateLevel('Level1')">  Begginer  </button>
+            <img id="lock0" src="../images/lock.png" />
+            <button id="intermediate" onclick="warning(event)">Intermediate</button>
+            <img id="lock1" src="../images/lock.png" />
+            <button id="expert" onclick="warning(event)">   Expert   </button>
+            <img id="lock2" src="../images/lock.png" />
+        </div>
+    </div>
+    <div id="myPoints">
+        <img id="x" src="../images/redx.jpg" onclick="closeDiv('myPoints')">
+        <h2 id="playerPoints"> </h2>
+        <h3><b class="green">Q.</b> How do I unlock a level?</h3>
+        <p><b class="green">A.</b> You need a certain amount of points in order to open higher levels:</p>
+        <ul>
+            <li>For the intermediate level you need 500 points. </li>
+            <li>For the intermediate level you need 1000 points.</li>
+        </ul>
+        <h3><b class="green">Q.</b> How do I get points?</h3>
+        <p><b class="green">A.</b> You recieve points for every card that you win according to the levels: </p>
+        <ul>
+            <li>Beginning: 10 points</li>
+            <li>Intermediate: 20 points</li>
+            <li>Expert: 30 points</li>
+        </ul>
+        <h3><b class="green">Q.</b> What if I get stuck?!</h3>
+        <p>
+            <b class="green">A.</b> You have a hint button! All the frogs that can be moved to another lily are highlighted in red.
+        </p>
+        <h3><b class="green">Q.</b>Can I lose points too?</h3>
+        <p><b class="green">A.</b>Yes, you can!</p>
+        <ul>
+            <li>If you lost a card you lose 100 points.</li>
+            <li>A hint costs you 20 points.</li>
+        </ul>
+        <h3 class="underlineGreen">Pay Attention:</h3>
+        <p>If you lose too many points, the level might become locked. Choose your moves wisely.</p>
+        <h2>Have fun!!</h2>
+    </div>
+    <script src="HomePage.js"></script>
+</body>
+</html>

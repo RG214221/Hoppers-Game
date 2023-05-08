@@ -1,0 +1,210 @@
+﻿
+body {
+    width: 98vw;
+    height: 97vh;
+    background-image: url('../images/pond.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-family: Ink Free;
+}
+#music {
+    position: fixed;
+    top: 6%;
+    left: 3%;
+    opacity: 50%;
+}
+div {
+    font-family: Calibri;
+}
+h1 {
+    position: absolute;
+    top: 85.5%;
+    left: 80%;
+    z-index: 3;
+    font-family: Papyrus;
+}
+#points {
+    font-size: 180%;
+    text-shadow: 0px 0px 8px red;
+}
+    h1:hover {
+        text-shadow: 0px 0px 8px red ;
+    }
+#exit {
+    top: 32.3%;
+    left: 91.2%;
+}
+#backToHomePage {
+    top: 71%;
+    left: 15%;
+}
+button {
+    position: center;
+    font-family: Calibri;
+    margin: 5%;
+    flex-grow: 1;
+    box-shadow: 0px 0px 8px #009900;
+    border: none;
+}
+
+    button:hover {
+        background-color: lightgray;
+    }
+    /*#x {
+    width: 9%;
+    height: 9%;
+    position: absolute;
+    left: 87%;
+    padding: 1%;
+}*/
+#hint {
+    margin-left: 44.5%;
+    margin-top: 4.5%;
+    font-family: Papyrus;
+    width: 5%;
+    height: 5%;
+    font-size: 200%;
+}
+
+#loseChoice,#enough,#notEnough {
+    background-color: white;
+    width: 34%;
+    height: 21%;
+    border: 6px solid black;
+    padding: 0.5%;
+    margin: 1%;
+    z-index: 4;
+    position: absolute;
+    left: 30%;
+    top: 35%;
+    display: none;
+}
+#notEnough img, #enough img{
+   width:9%;
+   padding-left: 43%; 
+}
+    #notEnough h2, #enough h2 {
+        margin-top: 0%;
+    }
+#notEnough, #enough {
+    top: 26%;
+    left: 36%;
+    width: 31%;
+    height: 37%;
+}
+    #notEnough h2, #enough h2 {
+        text-align: center;
+        color: black;
+        text-shadow: 0px 0px 3px red;
+    }
+    #notEnough #buttonsChoice {
+        display: flex;
+        margin: auto;
+        width: 60%;
+        height: 30%;
+    }
+    #enough #buttonsChoice {
+        display: flex;
+        margin: auto;
+        width: 80%;
+        height: 30%;
+    }
+#buttonsChoice {
+    display: flex;
+    margin: auto;
+    width: 60%;
+    height: 50%;
+}
+
+#hint {
+    box-shadow:none;
+    background-color: transparent;
+    border: none;
+}
+    #hint:hover {
+        text-shadow: 0px 0px 8px red;
+    }
+
+table {
+    margin: auto;
+    width: 40%;
+    height: 50%;
+    position: absolute;
+    top: 32%;
+    left: 32%;
+}
+
+.lily_pad {
+    background-image: url('../images/lilypad.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.frogOnBoard {
+    background-image: url('../images/frog.png');
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 75%;
+    height: 130%;
+    position: absolute;
+    right:7%;
+    bottom:38%;
+}
+#gif{
+    width:30%;
+    height:70%;
+    position:absolute;
+    z-index:3;
+    right:35%;
+    top:11%;
+}
+#printLoc {
+    position: absolute;
+    font-family: Ink Free;
+    left: 4%;
+    top: 15%;
+}
+/* The element to apply the animation to */
+@keyframes jump {
+    0% {
+        bottom: 0px;
+    }
+
+    50% {
+        bottom: 100px;
+    }
+
+    100% {
+        bottom: 18px;
+    }
+}
+/* Points Grow*/
+@keyframes grow {
+    from {
+        font-size: 1%;
+        opacity: 100%;
+    }
+
+    to {
+        font-size: 1000%;
+        opacity: 0%;
+    }
+}
+/* Points Shrink*/
+@keyframes shrink {
+    from {
+        font-size: 910%;
+        opacity: 100%;
+    }
+
+    to {
+        font-size: 1%;
+        opacity: 0%;
+    }
+}
